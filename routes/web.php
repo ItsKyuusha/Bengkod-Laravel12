@@ -1,12 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
@@ -61,9 +55,10 @@ Route::middleware(['auth'])->prefix('dokter')->name('dokter.')->group(function (
     Route::delete('/obat/{id}', [DokterController::class, 'hapusObat'])->name('obat.destroy');
 
     // Profil
-    Route::get('/profil', [DokterController::class, 'profil'])->name('profile');
+    Route::get('/profil', function () {
+        return view('dokter.profile');
+    })->name('profile');
 });
 
 
 
->>>>>>> a719af0 (bengkod)

@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <meta name="description" content="Bengkel Koding UTS">
+  <meta name="keywords" content="Laravel 12">
+  <meta name="author" content="David Sugiarto">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthApp - Management Health System</title>
+  <link rel="shortcut icon" href="{{ asset('storage/logo.png') }}" type="image/x-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,10 +18,25 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('AdminLTE-3.2.0/dist/css/adminlte.min.css') }}">
 </head>
+<style>
+  body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      background-size: 300% 300%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+</style>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{ asset('AdminLTE-3.2.0/index2.html') }}">Health App</a>
+    <a href="#" style="font-family: 'Great Vibes', cursive;">HealthApp</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
