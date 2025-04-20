@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,5 +45,23 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+=======
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class User extends Authenticatable
+{
+    protected $fillable = ['nama', 'alamat', 'no_hp', 'email', 'role', 'password'];
+
+    public function periksaSebagaiPasien(): HasMany
+    {
+        return $this->hasMany(Periksa::class, 'id_pasien');
+    }
+
+    public function periksaSebagaiDokter(): HasMany
+    {
+        return $this->hasMany(Periksa::class, 'id_dokter');
+>>>>>>> a719af0 (bengkod)
     }
 }
