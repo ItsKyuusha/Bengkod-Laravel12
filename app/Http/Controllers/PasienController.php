@@ -52,7 +52,7 @@ class PasienController extends Controller
             ->orderBy('tgl_periksa', 'desc')
             ->get();
 
-        return view('pasien.riwayat', compact('riwayat'));
+        return view('pasien.riwayat.index', compact('riwayat'));
     }
 
 }

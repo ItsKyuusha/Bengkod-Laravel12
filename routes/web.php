@@ -55,7 +55,9 @@ Route::middleware(['auth'])->prefix('dokter')->name('dokter.')->group(function (
     Route::delete('/obat/{id}', [DokterController::class, 'hapusObat'])->name('obat.destroy');
 
     // Profil
-    Route::get('/profil', [DokterController::class, 'profil'])->name('profile');
+    Route::get('/profil', function () {
+        return view('dokter.profile');
+    })->name('profile');
 });
 
 
